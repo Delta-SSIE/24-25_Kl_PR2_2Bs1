@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-OOP", "01-OOP", "{D0DCE24F-029B-4B6E-9E61-C24AA3FA7166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-OOP-010-Role-Papiru", "01-OOP-010-Role-Papiru\01-OOP-010-Role-Papiru.csproj", "{D1129B4E-268E-457B-8228-46C3E7FC9897}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-OOP-020-Tachometr", "C:\Users\koupja\source\repos\2024_PR2_2Bs1\01-OOP-020-Tachometr\01-OOP-020-Tachometr.csproj", "{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1129B4E-268E-457B-8228-46C3E7FC9897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1129B4E-268E-457B-8228-46C3E7FC9897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1129B4E-268E-457B-8228-46C3E7FC9897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1129B4E-268E-457B-8228-46C3E7FC9897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D1129B4E-268E-457B-8228-46C3E7FC9897} = {D0DCE24F-029B-4B6E-9E61-C24AA3FA7166}
+		{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698} = {D0DCE24F-029B-4B6E-9E61-C24AA3FA7166}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14ACA340-940F-444C-AD33-BC1A31B0BBE3}
+	EndGlobalSection
+EndGlobal
