@@ -5,9 +5,15 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-OOP", "01-OOP", "{D0DCE24F-029B-4B6E-9E61-C24AA3FA7166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-OOP-010-Role-Papiru", "01-OOP-010-Role-Papiru\01-OOP-010-Role-Papiru.csproj", "{D1129B4E-268E-457B-8228-46C3E7FC9897}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-OOP-010-Role-Papiru", "01-OOP-010-Role-Papiru\01-OOP-010-Role-Papiru.csproj", "{D1129B4E-268E-457B-8228-46C3E7FC9897}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-OOP-020-Tachometr", "C:\Users\koupja\source\repos\2024_PR2_2Bs1\01-OOP-020-Tachometr\01-OOP-020-Tachometr.csproj", "{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-OOP-030-Test-vyrobku", "C:\Users\koupja\source\repos\2024_PR2_2Bs1\01-OOP-030-Test-vyrobku\01-OOP-030-Test-vyrobku.csproj", "{90A9B3D3-EC73-49E0-8B9A-F9F50F6F3936}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-OOP-050-Lanovka-01-Pole", "C:\Users\koupja\source\repos\2024_PR2_2Bs1\01-OOP-050-Lanovka-01-Pole\01-OOP-050-Lanovka-01-Pole.csproj", "{2E0013E8-03F5-4F69-B724-3BEBFC79ED78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00-Rev-01-StatistikaPodLimitem", "00-Rev-01-StatistikaPodLimitem\00-Rev-01-StatistikaPodLimitem.csproj", "{B7AE95D0-5210-4095-BC5C-F2519E03AEA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +29,18 @@ Global
 		{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A9B3D3-EC73-49E0-8B9A-F9F50F6F3936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A9B3D3-EC73-49E0-8B9A-F9F50F6F3936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A9B3D3-EC73-49E0-8B9A-F9F50F6F3936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A9B3D3-EC73-49E0-8B9A-F9F50F6F3936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E0013E8-03F5-4F69-B724-3BEBFC79ED78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E0013E8-03F5-4F69-B724-3BEBFC79ED78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E0013E8-03F5-4F69-B724-3BEBFC79ED78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E0013E8-03F5-4F69-B724-3BEBFC79ED78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7AE95D0-5210-4095-BC5C-F2519E03AEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AE95D0-5210-4095-BC5C-F2519E03AEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AE95D0-5210-4095-BC5C-F2519E03AEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AE95D0-5210-4095-BC5C-F2519E03AEA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +48,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D1129B4E-268E-457B-8228-46C3E7FC9897} = {D0DCE24F-029B-4B6E-9E61-C24AA3FA7166}
 		{A8AF5AA8-2DDE-473F-9C95-F737A6CFC698} = {D0DCE24F-029B-4B6E-9E61-C24AA3FA7166}
+		{90A9B3D3-EC73-49E0-8B9A-F9F50F6F3936} = {D0DCE24F-029B-4B6E-9E61-C24AA3FA7166}
+		{2E0013E8-03F5-4F69-B724-3BEBFC79ED78} = {D0DCE24F-029B-4B6E-9E61-C24AA3FA7166}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14ACA340-940F-444C-AD33-BC1A31B0BBE3}
