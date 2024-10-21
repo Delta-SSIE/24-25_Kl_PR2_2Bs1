@@ -8,7 +8,7 @@ namespace _01_OOP_051_Lanovka_02_LinkedList
 {
     internal class LanovkaLinkedList
     {
-        private Clovek[] _sedacky;
+        //private Clovek[] _sedacky;
 
         public int Delka { get; init; }
         public int Nosnost { get; init; }
@@ -17,6 +17,22 @@ namespace _01_OOP_051_Lanovka_02_LinkedList
         private Sedacka _horniSedacka = null;
 
         public bool JeVolnoDole => _dolniSedacka.Pasazer == null;
+
+        //public bool JeVolnoDole
+        //{
+        //    get
+        //    {
+        //        //if (_dolniSedacka.Pasazer == null)
+        //        //    return true;
+        //        //else
+        //        //    return false;
+
+        //        return _dolniSedacka.Pasazer == null;
+
+        //    }
+
+        //}
+
         public bool JeVolnoNahore => _horniSedacka.Pasazer == null;
 
         public int Zatizeni
@@ -27,14 +43,12 @@ namespace _01_OOP_051_Lanovka_02_LinkedList
                 Sedacka s = _dolniSedacka;
                 do
                 {
-                    if (s.Pasazer == null)
-                        continue;
-
-                    zatizeni += s.Pasazer.Hmotnost;
+                    if (s.Pasazer != null)
+                        zatizeni += s.Pasazer.Hmotnost;
 
                     s = s.Dalsi;
                 }
-                while (s.Dalsi != null);
+                while (s != null);
 
                 return zatizeni;
             }
