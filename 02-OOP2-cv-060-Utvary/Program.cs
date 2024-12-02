@@ -18,6 +18,7 @@
             }
 
             PlechovkaBarvy plechovka = new PlechovkaBarvy(80, 2);
+
             Console.WriteLine(plechovka);
             Console.WriteLine();
 
