@@ -1,0 +1,79 @@
+[
+  {
+    "ID": 1,
+    "Name": "Frank",
+    "Surname": "Weaver",
+    "Sales": 0,
+    "ParentId": 0
+  },
+  {
+    "ID": 2,
+    "Name": "William",
+    "Surname": "Brown",
+    "Sales": 40854,
+    "ParentId": 1
+  },
+  {
+    "ID": 7,
+    "Name": "Benny",
+    "Surname": "O\u0027Hara",
+    "Sales": 25592,
+    "ParentId": 1
+  },
+  {
+    "ID": 8,
+    "Name": "Tina",
+    "Surname": "Smith",
+    "Sales": 36131,
+    "ParentId": 1
+  },
+  {
+    "ID": 9,
+    "Name": "Mia",
+    "Surname": "Brown",
+    "Sales": 32593,
+    "ParentId": 1
+  },
+  {
+    "ID": 10,
+    "Name": "Albert",
+    "Surname": "Martinez",
+    "Sales": 5470,
+    "ParentId": 9
+  },
+  {
+    "ID": 11,
+    "Name": "Emma",
+    "Surname": "Jackson",
+    "Sales": 23718,
+    "ParentId": 10
+  },
+  {
+    "ID": 3,
+    "Name": "Olivia",
+    "Surname": "Jones",
+    "Sales": 30426,
+    "ParentId": 2
+  },
+  {
+    "ID": 4,
+    "Name": "Albert",
+    "Surname": "Smith",
+    "Sales": 29862,
+    "ParentId": 3
+  },
+  {
+    "ID": 5,
+    "Name": "Alice",
+    "Surname": "Williams",
+    "Sales": 24698,
+    "ParentId": 3
+  },
+  {
+    "ID": 6,
+    "Name": "Benny",
+    "Surname": "MacSweeney",
+    "Sales": 31767,
+    "ParentId": 3
+  }
+]
