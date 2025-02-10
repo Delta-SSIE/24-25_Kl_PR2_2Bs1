@@ -53,20 +53,20 @@ class Maze
         _display.WrapUp();
     }
 
-    public void Solve()
+    public void Solve(ICoordsList toBeVisited)
     {
         //Připravím seznam bodů k projití
-        Stack<Coords> toBeVisited = new Stack<Coords>();
+        //Stack<Coords> toBeVisited = new Stack<Coords>();
 
         // Začnu na startu - dám ho do seznamu
-        toBeVisited.Push(_entrance);
+        toBeVisited.Add(_entrance);
 
 
         // dokud v seznamu něco je
         while (toBeVisited.Count > 0) {
 
             // vyber ze senamu první
-            Coords here = toBeVisited.Pop();
+            Coords here = toBeVisited.NextPlace();
 
             // když jsi v cíli, skonči
             if (_map[here.X, here.Y] == TileType.Exit)
@@ -80,7 +80,7 @@ class Maze
 
             foreach (Coords neighbor in VisitableNeighbors(here))
             {
-                toBeVisited.Push(neighbor);
+                toBeVisited.Add(neighbor);
                 if (_map[neighbor.X, neighbor.Y] != TileType.Exit)
                     _map[neighbor.X, neighbor.Y] = TileType.Marked;
             }
