@@ -5,5 +5,6 @@ class Program {
   {
       Maze maze = new Maze();
       maze.LoadMaze("maze.txt");
+        maze.Solve();
   }
 }

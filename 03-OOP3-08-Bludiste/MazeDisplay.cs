@@ -24,6 +24,8 @@ class MazeDisplay
             TileType.Corridor => ConsoleColor.Black,
             TileType.Entrance => ConsoleColor.Red,
             TileType.Exit => ConsoleColor.Green,
+            TileType.Marked => ConsoleColor.Gray,
+            TileType.Visited => ConsoleColor.Yellow,
             _ => ConsoleColor.Black,
         };
         Console.SetCursorPosition(2 * (Left + coords.X), Top + coords.Y); //2 * x proto, aby byly dílky zhruba čtvercové

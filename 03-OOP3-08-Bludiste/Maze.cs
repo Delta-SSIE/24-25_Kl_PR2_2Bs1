@@ -17,7 +17,7 @@ class Maze
             Width = int.Parse(reader.ReadLine()); //první řádek je šířka
             Height = int.Parse(reader.ReadLine()); //druhý řádek je výška
             
-            _map = new TileType[Width, Height];
+            _map = new TileType[Height, Width];
 
             string line;
             for (int y = 0; y < Height; y++) //projdu všechny řádky
@@ -51,6 +51,70 @@ class Maze
             }
         }
         _display.WrapUp();
+    }
+
+    public void Solve()
+    {
+        //Připravím seznam bodů k projití
+        Stack<Coords> toBeVisited = new Stack<Coords>();
+
+        // Začnu na startu - dám ho do seznamu
+        toBeVisited.Push(_entrance);
+
+
+        // dokud v seznamu něco je
+        while (toBeVisited.Count > 0) {
+
+            // vyber ze senamu první
+            Coords here = toBeVisited.Pop();
+
+            // když jsi v cíli, skonči
+            if (_map[here.X, here.Y] == TileType.Exit)
+                return;
+
+            // poznač si, žes tu byl
+            _map[here.X, here.Y] = TileType.Visited;
+
+
+            // dej do seznamu všechny jeho zatím nezaznamenané sousedy
+
+            foreach (Coords neighbor in VisitableNeighbors(here))
+            {
+                toBeVisited.Push(neighbor);
+                if (_map[neighbor.X, neighbor.Y] != TileType.Exit)
+                    _map[neighbor.X, neighbor.Y] = TileType.Marked;
+            }
+
+            RenderMaze();
+            System.Threading.Thread.Sleep(100);
+        }
+    }
+
+    private Coords[] VisitableNeighbors (Coords location)
+    {
+        List<Coords> neighbors = new List<Coords>();
+        (int dx, int dy)[] steps = { (0, 1), (1, 0), (0, -1), (-1, 0) };
+
+        foreach (var step in steps)
+        {
+            Coords candidate = new Coords(location.X + step.dx, location.Y + step.dy);
+            
+            if ( 
+                candidate.X < 0 
+                || candidate.Y < 0 
+                || candidate.X >= Width 
+                || candidate.Y >= Height
+            )
+                continue;
+
+            if (
+                _map[candidate.X, candidate.Y] == TileType.Corridor 
+                || _map[candidate.X, candidate.Y] == TileType.Exit
+            )
+                neighbors.Add(candidate);
+        }
+
+        return neighbors.ToArray();
     }
 
 }
