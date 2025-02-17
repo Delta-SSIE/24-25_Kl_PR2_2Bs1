@@ -21,3 +21,4 @@ namespace _01_OOP_051_Lanovka_02_LinkedList
             Hmotnost = hmotnost;
         }
     }
+}

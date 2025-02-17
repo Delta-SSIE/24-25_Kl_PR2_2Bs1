@@ -6,7 +6,7 @@
         {
             static void Main(string[] args)
             {
-                Lanovka lanovka = new Lanovka(4, 250);
+                LanovkaLinkedList lanovka = new LanovkaLinkedList(4, 250);
 
                 Clovek pepa = new Clovek("Pepa", 80);
                 Clovek franta = new Clovek("Franta", 60);
