@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _06_DB_02_EF_basics
+namespace _06_DB_03_EF_relations
 {
     class Car
     {
@@ -14,5 +14,8 @@ namespace _06_DB_02_EF_basics
         public string Brand { get; set; }
         public string Model { get; set; }
         public DateTime Purchased { get; set; }
+
+        [InverseProperty("Car")]
+        public Driver Driver { get; set; }
     }
 }

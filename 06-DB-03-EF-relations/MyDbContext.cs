@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _06_DB_02_EF_basics
+namespace _06_DB_03_EF_relations
 {
     class MyDbContext : DbContext
     {

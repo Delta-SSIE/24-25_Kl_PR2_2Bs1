@@ -88,14 +88,14 @@ namespace _06_DB_01_SQL_connection
             {
                 int id = reader.GetInt32(0);
                 //string RegPlate = reader.GetString(1);
-                string regPlate = (string)reader["RegPlate"];
-                string brand = (string)reader["Brand"];
-                string model = (string)reader["Model"];
-                string name = (reader["Name"] is null) ?  "" : (string)reader["Name"];
-                string surname = (reader["Surname"] is null) ? "" : (string)reader["Surname"]; 
+                string regPlate = reader["RegPlate"] as string;
+                string brand = reader["Brand"] as string;
+                string model = reader["Model"] as string;
+                string name = reader["Name"] as string ?? "";
+                string surname = reader["Surname"] as string ?? "none"; 
                 DateTime purchased = reader.GetDateTime(4);
 
-                Console.WriteLine($"ID: {id}, reg. plate: {regPlate}, brand: {brand}, model: {model}, purchased {purchased}, driver: {surname}, {name}");
+                Console.WriteLine($"ID: {id}, reg. plate: {regPlate}, brand: {brand}, model: {model}, purchased {purchased.ToShortDateString()}, driver: {surname} {name}");
 
             }
                         

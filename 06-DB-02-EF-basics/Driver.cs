@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace _06_DB_02_EF_basics
 {
-    class Car
+    class Driver
     {
         public int Id { get; set; }
-        public string RegPlate { get; set; }
-        public string Brand { get; set; }
-        public string Model { get; set; }
-        public DateTime Purchased { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        
+        [ForeignKey("CarId")]
+        public Car? Car { get; set; }
     }
 }
