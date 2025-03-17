@@ -12,7 +12,12 @@ namespace _06_DB_02_EF_basics
             ListCars(dbContext);
 
             //insert
-            var newCar = new Car() { Brand = "Toyota", Model = "Cellica", Purchased = DateTime.Now, RegPlate = "1A11234" };
+            var newCar = new Car() { 
+                Brand = "Toyota", 
+                Model = "Cellica", 
+                Purchased = DateTime.Now, 
+                RegPlate = "1A11234" 
+            };
             dbContext.Cars.Add(newCar);
             dbContext.SaveChanges();
 

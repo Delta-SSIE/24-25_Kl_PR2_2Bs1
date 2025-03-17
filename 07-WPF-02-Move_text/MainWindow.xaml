@@ -1,0 +1,41 @@
+﻿<Window x:Class="_07_WPF_02_Move_text.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_07_WPF_02_Move_text"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="InputTB"
+                 HorizontalAlignment="Left" 
+                 Margin="135,78,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="Piš sem"                 
+                 VerticalAlignment="Top" 
+                 Width="120"
+                 KeyDown="InputTB_KeyDown"
+                 />
+        
+        <TextBox x:Name="OutputTB" 
+                 IsEnabled="False"
+                 HorizontalAlignment="Left" 
+                 Margin="135,117,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="" 
+                 VerticalAlignment="Top"                  
+                 Width="120"/>
+        
+        <Button x:Name="MoveBtn"  
+                Content="Button" 
+                HorizontalAlignment="Left" 
+                Margin="283,78,0,0" 
+                VerticalAlignment="Top" 
+                Height="57" 
+                Width="52"
+                Click="MoveBtn_Click"
+                />
+        
+
+    </Grid>
+</Window>
