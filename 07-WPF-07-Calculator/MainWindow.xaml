@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_07_WPF_07_Calculator"
         mc:Ignorable="d"
+        x:Name="CalcWindow"
         Title="MainWindow" Height="450" Width="400">
     <Window.Resources>
         <SolidColorBrush x:Key="baseBtnCol" Color="Black"/>
@@ -46,7 +47,7 @@
 
         <TextBox x:Name="DisplayTB"
                  IsReadOnly="True"
-                 Text="0"
+                 Text="{Binding ElementName=CalcWindow, Path=DisplayText}"
                  Grid.Column="0"
                  Grid.Row="0"
                  Grid.ColumnSpan="4"
@@ -77,7 +78,8 @@
                 Content="%"
                 Grid.Row="1"
                 Grid.Column="2"
-                Style="{StaticResource baseBtnStyle}"               
+                Style="{StaticResource baseBtnStyle}" 
+                Click="PercentBtn_Click"
                 />
 
         <Button x:Name="DivideBtn"
@@ -85,6 +87,7 @@
                 Grid.Row="1"
                 Grid.Column="3"
                 Style="{StaticResource baseBtnStyle}"               
+                Click="OperationBtn_Click"
                 />
 
         <Button x:Name="SevenBtn"
@@ -116,6 +119,7 @@
                 Grid.Row="2"
                 Grid.Column="3"
                 Style="{StaticResource baseBtnStyle}"               
+                Click="OperationBtn_Click"
                 />
 
         <Button x:Name="FourBtn"
@@ -146,7 +150,8 @@
                 Content="−"
                 Grid.Row="3"
                 Grid.Column="3"
-                Style="{StaticResource baseBtnStyle}"               
+                Style="{StaticResource baseBtnStyle}"       
+                Click="OperationBtn_Click"
                 />
 
         <Button x:Name="OneBtn"
@@ -177,7 +182,8 @@
                 Content="+"
                 Grid.Row="4"
                 Grid.Column="3"
-                Style="{StaticResource baseBtnStyle}"               
+                Style="{StaticResource baseBtnStyle}"       
+                Click="OperationBtn_Click"
                 />
 
         <Button x:Name="ZeroBtn"
@@ -201,7 +207,8 @@
                 Grid.Row="5"
                 Grid.Column="2"
                 Grid.ColumnSpan="2"
-                Style="{StaticResource baseBtnStyle}"               
+                Style="{StaticResource baseBtnStyle}" 
+                Click="EqualsBtn_Click"
                 />
 
     </Grid>

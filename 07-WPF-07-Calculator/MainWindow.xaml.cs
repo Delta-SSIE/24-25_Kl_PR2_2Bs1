@@ -17,14 +17,26 @@ namespace _07_WPF_07_Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Operation operation = Operation.None;
+        private Operation lastOperation = Operation.None;
         private double lastNumber;
         private string decimalDot = System.Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+
+
+        public string DisplayText
+        {
+            get { return (string)GetValue(DisplayTextProperty); }
+            set { SetValue(DisplayTextProperty, value); }
+        }
+
+        public static readonly DependencyProperty DisplayTextProperty =
+            DependencyProperty.Register("DisplayText", typeof(string), typeof(MainWindow), new PropertyMetadata(""));
+
+
 
         public MainWindow()
         {
             InitializeComponent();
-            
+            DisplayText = "0";
         }
 
         private void NumBtnClick(object sender, RoutedEventArgs e)
@@ -33,26 +45,82 @@ namespace _07_WPF_07_Calculator
             string digit = ((Button)sender).Content.ToString();
 
             //nahraď nebo připoj do displeje
-            if (DisplayTB.Text == "0")
-                DisplayTB.Text = digit;
-            else 
-                DisplayTB.Text += digit;
+            if (DisplayText == "0")
+                DisplayText = digit;
+            else
+                DisplayText += digit;
         }
 
         private void DotBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (!DisplayTB.Text.Contains(decimalDot))
-                DisplayTB.Text += decimalDot;
+            if (!DisplayText.Contains(decimalDot))
+                DisplayText += decimalDot;
         }
 
         private void ACBtn_Click(object sender, RoutedEventArgs e)
         {
-            DisplayTB.Text = "0";
+            DisplayText = "0";
         }
 
         private void PlusMinusBtn_Click(object sender, RoutedEventArgs e)
         {
-            DisplayTB.Text = (double.Parse(DisplayTB.Text) * (-1)).ToString();
+            DisplayText = (double.Parse(DisplayText) * (-1)).ToString();
+        }
+
+        private void PercentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DisplayText = (double.Parse(DisplayText) / 100).ToString();
+        }
+
+        private void OperationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string symbol = (sender as Button).Content.ToString();
+            Operation operation = symbol switch
+            {
+                "+" => Operation.Add,
+                "−" => Operation.Subtract,
+                "×" => Operation.Multiply,
+                "/" => Operation.Divide,
+                _ => Operation.None
+            };
+
+            //pokud je zapamatovaná operace, vykonej
+            if (lastOperation != Operation.None)
+            {
+                //zapamatuj si výsledek a operaci
+                double currentNum = double.Parse(DisplayText);
+                lastNumber = Calculate(currentNum);
+            }
+
+            //jinak si zapamatuj displej a operaci
+            else
+            {
+                lastNumber = double.Parse(DisplayText);
+            }
+            lastOperation = operation;
+            DisplayText = "0";
+
+        }
+
+        private void EqualsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double currentNum = double.Parse(DisplayText);
+            double result = Calculate(currentNum);
+
+            DisplayText = result.ToString();
+            lastOperation = Operation.None;
+        }
+
+        private double Calculate(double currentNum)
+        {
+            return lastOperation switch
+            {
+                Operation.Add => SimpleMath.Add(lastNumber, currentNum),
+                Operation.Subtract => SimpleMath.Subtract(lastNumber, currentNum),
+                Operation.Divide => SimpleMath.Divide(lastNumber, currentNum),
+                Operation.Multiply => SimpleMath.Multiply(lastNumber, currentNum),
+                _ => 0
+            };
         }
     }
 }
