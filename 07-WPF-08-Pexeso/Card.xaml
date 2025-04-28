@@ -13,9 +13,9 @@
             >
         <Grid Background="Aqua">
             <Viewbox>
-                <Label Content="0" />
+                <Label Content="{Binding Symbol, RelativeSource={RelativeSource AncestorType=UserControl}}" />
             </Viewbox>
-            <Rectangle x:Name="CardBack" Fill="SandyBrown" Margin="0" Visibility="Hidden"/>
+            <Rectangle x:Name="CardBack" Fill="SandyBrown" Margin="0" Visibility="Visible"/>
         </Grid>
     </Border>
 </UserControl>
